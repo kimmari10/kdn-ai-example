@@ -31,10 +31,14 @@
   from sklearn.metrics import mean_squared_error, r2_score
 
   x_data, y_data = datasets.load_diabetes(return_X_y=True)
+
+  x_data = x_data[:, np.newaxis, 2]
+
   x_train = x_data[:-20]
   y_train = y_data[:-20]
   x_test = x_data[-20:]
   y_test = y_data[-20:]
+
   print(x_test.shape)
   print(y_test.shape)
   
@@ -46,8 +50,8 @@
   print('MSE:', mean_squared_error(y_test, y_pred))
   print('R2Score:', r2_score(y_test, y_pred))
   
-  scatter(y_test, y_pred, color='black')
-  plot(y_test, y_pred, color='blue', linewidth=2)
+  scatter(x_test, y_test, color='black')
+  plot(x_test, y_pred, color='blue', linewidth=2)
   ```
   
  
