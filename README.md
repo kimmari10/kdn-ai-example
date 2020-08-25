@@ -29,12 +29,14 @@
   import numpy as np   
   from sklearn import datasets, linear_model   
   from sklearn.metrics import mean_squared_error, r2_score
-  
-  x_data, y_data = datasets.load_diabetes(return_X_y=True)   
-  x_train = x_data[:-20]   
+
+  x_data, y_data = datasets.load_diabetes(return_X_y=True)
+  x_train = x_data[:-20]
+  y_train = y_data[:-20]
   x_test = x_data[-20:]
-  y_train = y_data[:-20]   
   y_test = y_data[-20:]
+  print(x_test.shape)
+  print(y_test.shape)
   
   regr = linear_model.LinearRegression()
   regr.fit(x_train, y_train)
@@ -43,6 +45,9 @@
 
   print('MSE:', mean_squared_error(y_test, y_pred))
   print('R2Score:', r2_score(y_test, y_pred))
+  
+  scatter(y_test, y_pred, color='black')
+  plot(y_test, y_pred, color='blue', linewidth=2)
   ```
   
  
