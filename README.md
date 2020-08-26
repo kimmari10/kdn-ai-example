@@ -1,3 +1,5 @@
+# 강사 Anderson jo [http://incredible.ai/]
+
 # gcp touring
 
 ## create ubuntu 20.04LTS sever
@@ -142,26 +144,8 @@
   - `k get nodes`
   - `k cluster-info`
   
- ## configure deployment setup
-  - ```
-    apiVersion: apps/v1
-    kind: Deployment
-    metadata:
-            name : nginx-deployment
-    spec:   
-            selector:
-                    matchLabels:
-                            app: nginx
-            replicas: 2
-            template:
-                    metadata:
-                            labels:
-                                    app: nginx
-                    spec:           
-                            containers:
-                                    - name: nginx
-                                    image: nginx:lastest
-                                    ports:
-                                            -containerPort: 80
-  ```
-   
+ ## apply Deployment.yaml (example)
+  - `kubectl apply -f https://k8s.io/examples/controllers/nginx-deployment.yaml`
+ 
+ ## port forwarding
+  - `kubectl port-forward "PODS_NAME" 5000:80 --address 0.0.0.0
