@@ -149,3 +149,24 @@
  
  ## port forwarding
   - `kubectl port-forward "PODS_NAME" 5000:80 --address 0.0.0.0`
+
+ ## download sample sources by github
+  - AndersonJo's Github[https://github.com/AndersonJo/code-snippet]
+  
+ ## replace fashion_model.h5
+  > copy google drive notebook
+  
+ ## install python env
+  - `sudo apt install phthon3-pip`
+  - `sudo pip3 install requirement.txt`
+  > postman POST Request test
+  
+ ## TEST
+  - `docker build -t myapp .`
+  - `docker run -d -p 5000:5000 myapp myapp:latest`
+  - `eval $(minikube docker-env)`
+  - `docker build -t myapp .`
+  - `kubectl run myapp-kube --image=myapp:latest --image-pull-policy=Never`
+  
+ 
+  
