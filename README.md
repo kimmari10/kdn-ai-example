@@ -131,13 +131,37 @@
    ```
  - `minikube status`
  - `minikube start`
- > ```
-   source <(kubectl completion bash)
-
-   alias k=kubectl
-   complete -F __start_kubectl k
-   ```
+ > source <(kubectl completion bash)
+ >
+ > alias k=kubectl   
+ > complete -F __start_kubectl k
    
  ## install kubectl ubuntu[https://kubernetes.io/docs/tasks/tools/install-kubectl/]
-  - `sudo snap install kubectl --classic`
+  - `sudo snap install kubectl --classic
+  - `kubectl version`
+  - `k get nodes`
+  - `k cluster-info`
+  
+ ## configure deployment setup
+  - ```
+    apiVersion: apps/v1
+    kind: Deployment
+    metadata:
+            name : nginx-deployment
+    spec:   
+            selector:
+                    matchLabels:
+                            app: nginx
+            replicas: 2
+            template:
+                    metadata:
+                            labels:
+                                    app: nginx
+                    spec:           
+                            containers:
+                                    - name: nginx
+                                    image: nginx:lastest
+                                    ports:
+                                            -containerPort: 80
+  ```
    
