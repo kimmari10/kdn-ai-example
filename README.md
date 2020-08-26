@@ -1,13 +1,13 @@
-# gcp
+# gcp touring
 
 ## create ubuntu 20.04LTS sever
- - ```sudo apt update```
+ - ```$ sudo apt update```
 
 ## install nginx
- - ```sudo apt install nginx```
+ - ```$ sudo apt install nginx```
  
 ## install python3-pip
- - ```sudo apt install python3-pip```
+ - ```$ sudo apt install python3-pip```
 
 ## install jupyter notebook and setup
  - ```sudo pip3 install numpy pandas jupyter notebook```
@@ -55,3 +55,43 @@
   ```
   
  
+
+# docker
+
+## create ubuntu 20.04LTS sever
+ - ```$ sudo apt update```
+
+## install nginx
+ - ```$ sudo apt install nginx```
+ 
+## setup the repository [https://docs.docker.com/engine/install/ubuntu/]
+ -  ```
+    $ sudo apt-get install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    gnupg-agent \
+    software-properties-common
+    ```
+ - ```curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -```
+ - ```
+   $ sudo add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable"
+   ```
+ ## install docker engine
+  - ```$ sudo apt-get update```
+  - ```$ sudo apt-get install docker-ce docker-ce-cli containerd.io```
+   
+  - ```$ sudo groupadd docker```
+  - ```$ sudo usermod -aG docker $USER```
+ 
+  - ```$ sudo aa-status```
+  - ```$ sudo systemctl disable apparmor.service --now```
+  - ```$ sudo service apparmor stop```
+  
+  - ```$ sudo reboot```
+  
+ ## run docker hello-world
+  - ```docker run hello-world```
