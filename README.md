@@ -1,18 +1,18 @@
 # gcp touring
 
 ## create ubuntu 20.04LTS sever
- - ```$ sudo apt update```
+ - `$ sudo apt update`
 
 ## install nginx
- - ```$ sudo apt install nginx```
+ - `$ sudo apt install nginx`
  
 ## install python3-pip
- - ```$ sudo apt install python3-pip```
+ - `$ sudo apt install python3-pip`
 
 ## install jupyter notebook and setup
- - ```sudo pip3 install numpy pandas jupyter notebook```
- - ```jupyter notebook password```
- - ```jupyter notebook --ip 0.0.0.0 --port 8888```
+ - `$ sudo pip3 install numpy pandas jupyter notebook`
+ - `jupyter notebook password`
+ - `jupyter notebook --ip 0.0.0.0 --port 8888`
  
 ## create storage server
 
@@ -21,7 +21,7 @@
  
 
 ## create model 
- - ```sudo pip3 install matplotlib sklearn pandas numpy```
+ - `sudo pip3 install matplotlib sklearn pandas numpy`
  - jupyter notebook   
   ```
   %pylab inline   
@@ -59,10 +59,10 @@
 # docker
 
 ## create ubuntu 20.04LTS sever
- - ```$ sudo apt update```
+ - `$ sudo apt update`
 
 ## install nginx
- - ```$ sudo apt install nginx```
+ - `$ sudo apt install nginx`
  
 ## setup the repository [https://docs.docker.com/engine/install/ubuntu/]
  -  ```
@@ -73,7 +73,7 @@
     gnupg-agent \
     software-properties-common
     ```
- - ```curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -```
+ - `curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -`
  - ```
    $ sudo add-apt-repository \
    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
