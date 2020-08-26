@@ -141,11 +141,11 @@
  ## install kubectl ubuntu[https://kubernetes.io/docs/tasks/tools/install-kubectl/]
   - `sudo snap install kubectl --classic
   - `kubectl version`
-  - `k get nodes`
-  - `k cluster-info`
+  - `kubectl get nodes`
+  - `kubectl cluster-info`
   
  ## apply Deployment.yaml (example)
   - `kubectl apply -f https://k8s.io/examples/controllers/nginx-deployment.yaml`
  
  ## port forwarding
-  - `kubectl port-forward "PODS_NAME" 5000:80 --address 0.0.0.0
+  - `kubectl port-forward "PODS_NAME" 5000:80 --address 0.0.0.0`
