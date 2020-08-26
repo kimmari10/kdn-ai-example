@@ -81,32 +81,32 @@
    stable"
    ```
 ## install docker engine
- - ```$ sudo apt-get update```
- - ```$ sudo apt-get install docker-ce docker-ce-cli containerd.io```
+ - `$ sudo apt-get update`
+ - `$ sudo apt-get install docker-ce docker-ce-cli containerd.io`
   
- - ```$ sudo groupadd docker```
- - ```$ sudo usermod -aG docker $USER```
+ - `$ sudo groupadd docker`
+ - `$ sudo usermod -aG docker $USER`
 
- - ```$ sudo aa-status```
- - ```$ sudo systemctl disable apparmor.service --now```
- - ```$ sudo service apparmor stop```
+ - `$ sudo aa-status`
+ - `$ sudo systemctl disable apparmor.service --now`
+ - `$ sudo service apparmor stop`
   
- - ```$ sudo reboot```
+ - `$ sudo reboot`
   
 ## run docker hello-world
- - ```docker run hello-world```
- - ```docker info```
+ - `docker run hello-world`
+ - `docker info`
 
 ## docker test
- - ```docker ps -a```
- - ```docker pull ubuntu:20.04```
- - ```docker images```
- - ```docker run --name haha -it ubuntu:20.04 /bain/bash```
- - ```docker run -d --name daemon_ubuntu ubuntu:20.04 /bain/bash```
+ - `docker ps -a`
+ - `docker pull ubuntu:20.04`
+ - `docker images`
+ - `docker run --name haha -it ubuntu:20.04 /bain/bash`
+ - `docker run -d --name daemon_ubuntu ubuntu:20.04 /bain/bash`
  
 ## pull docker nginx image
- - ```docker pull nginx```
- - ```docker run --name docker-nginx -d -p 8080:80 nginx
+ - `docker pull nginx`
+ - `docker run --name docker-nginx -d -p 8080:80 nginx`
  
 ## create Dockerfile
  - 
