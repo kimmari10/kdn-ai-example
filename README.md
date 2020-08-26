@@ -109,4 +109,10 @@
  - `docker run --name docker-nginx -d -p 8080:80 nginx`
  
 ## create Dockerfile
- - 
+ - `docker build -t myfirstcontainer .`
+
+## clear docker processes
+ - `docker container prune`
+ 
+## clear docker images
+ - `docker images rmi $(docker images -qa)`
