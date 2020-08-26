@@ -118,3 +118,26 @@
  - `docker images rmi $(docker images -qa)`
 
 
+# kubenetes
+
+## instal minikube ubuntu[https://kubernetes.io/docs/tasks/tools/install-minikube/]
+ - ```
+   curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 
+   && chmod +x minikube
+   ```
+ - ```
+   sudo mkdir -p /usr/local/bin/
+   sudo install minikube /usr/local/bin/
+   ```
+ - `minikube status`
+ - `minikube start`
+ > ```
+   source <(kubectl completion bash)
+
+   alias k=kubectl
+   complete -F __start_kubectl k
+   ```
+   
+ ## install kubectl ubuntu[https://kubernetes.io/docs/tasks/tools/install-kubectl/]
+  - `sudo snap install kubectl --classic`
+   
