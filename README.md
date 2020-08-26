@@ -169,4 +169,3 @@
   - `kubectl run myapp-kube --image=myapp:latest --image-pull-policy=Never`
   - `kubectl port-forward myapp-kube 5000:5000 --address 0.0.0.0`
  
-  
